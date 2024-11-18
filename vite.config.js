@@ -8,7 +8,7 @@ export default defineConfig({
     host: true,
     
     },
-  base: "/crud"
+  base: "/crud/"
     
 });
 
