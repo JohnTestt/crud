@@ -1,7 +1,7 @@
 import { jsxs, Fragment, jsx } from "react/jsx-runtime";
 import React, { createContext, useContext, useState, useRef, useEffect } from "react";
 import { renderToPipeableStream } from "react-dom/server";
-import { Link, useNavigate, useParams, BrowserRouter, Routes, Route } from "react-router-dom";
+import { Link, useNavigate, useParams, HashRouter, Routes, Route } from "react-router-dom";
 import styled, { styled as styled$1 } from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -1671,7 +1671,7 @@ const Edit = () => {
   ] });
 };
 function App() {
-  return /* @__PURE__ */ jsx(BrowserRouter, { children: /* @__PURE__ */ jsxs(Routes, { children: [
+  return /* @__PURE__ */ jsx(HashRouter, { children: /* @__PURE__ */ jsxs(Routes, { children: [
     /* @__PURE__ */ jsx(Route, { path: "/", element: /* @__PURE__ */ jsx(Header, { children: /* @__PURE__ */ jsx(Template, { title: "Home", Component: Home }) }) }),
     /* @__PURE__ */ jsx(Route, { path: "/users", element: /* @__PURE__ */ jsx(Header, { children: /* @__PURE__ */ jsx(ProtectRoute, { children: /* @__PURE__ */ jsx(Template, { title: "Adm Usuários", Component: Users }) }) }) }),
     /* @__PURE__ */ jsx(Route, { path: "/users/edit/:id", element: /* @__PURE__ */ jsx(Header, { children: /* @__PURE__ */ jsx(ProtectRoute, { children: /* @__PURE__ */ jsx(Template, { title: "Editar Usuário", Component: Edit }) }) }) }),
