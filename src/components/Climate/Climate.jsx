@@ -9,7 +9,7 @@ export const Climate = () => {
 
   useEffect(() => {
     axios
-      .get("http://api.weatherapi.com/v1/current.json", {
+      .get("http://api.weatherapi.com/v1/current.json", { 
         params: {
           key: "54eef18cbe4f462e930121721242311",
           q: "auto:ip",
