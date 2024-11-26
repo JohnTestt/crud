@@ -53,9 +53,11 @@ export const Header = ({ children }) => {
       <HeaderMenu>
         <Navigation>
           <NavigationItem onClick={() => { handleOpenDrawer() }}>
-            {<StyledMenuButton>{
+            <StyledMenuButton>
+              {
               openDrawer ? <StyledcloseIcon /> : <StyledMenuIcon />
-            }</StyledMenuButton>}
+              }
+            </StyledMenuButton>
           </NavigationItem>
 
           <NavigationItem>
@@ -77,7 +79,7 @@ export const Header = ({ children }) => {
         </Navigation>
       </HeaderMenu>
 
-      {openDrawer && <Drawer open={openDrawer} />}
+      {openDrawer && <Drawer open={openDrawer} />} 
 
       {isMenuOpen && (
         <div ref={menuRef}>

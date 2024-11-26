@@ -73,7 +73,7 @@ export const Users = () => {
 
             {error
                 ? <Error />
-                : ( 
+                : (
                     <StyledBox>
                         {
                             filteredUsers.map((user) => (
@@ -90,31 +90,10 @@ export const Users = () => {
                             )
                             )
                         }
-                    </StyledBox>
+                    </StyledBox> 
                 )
             }
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-    
+
         </>
 
     )

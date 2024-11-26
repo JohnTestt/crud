@@ -3,15 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import { SnackBar } from '../../components/SnackBar/SnackBar';
+import { FormInput } from '../../components/FormInput/FormInput';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import EmailIcon from "@mui/icons-material/Email";
 
 import {
     FormContainer,
-    InputField,
     SaveButton,
-    InputContainer,
-    IconContainer,
-    AccountIcon,
-    MailIcon,
     Title
 } from './style/style';
 
@@ -32,7 +30,7 @@ export const Register = () => {
 
     };
 
-    const finishLogin = (sucess = true) => { 
+    const finishLogin = (sucess = true) => {
         if (sucess) {
 
             msgSnackBar(`Usuário ${form.name} Cadastrado com Sucesso!`)
@@ -86,45 +84,36 @@ export const Register = () => {
 
     return (
         <>
+
             <FormContainer as='form'>
                 <Title>Cadastrar Usuário</Title>
-               
-                <InputContainer>
-                    <IconContainer>
-                        < AccountIcon />
-                    </IconContainer>
-                    <InputField
-                        placeholder='Digite seu Nome'
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={form.name}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </InputContainer>
 
-                <InputContainer>
-                    <IconContainer>
-                        < MailIcon />
-                    </IconContainer>
-                    <InputField
-                        placeholder='Cadastre seu Email'
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleInputChange}
-                        required
-                    />
-                </InputContainer>
+                <FormInput 
+                    placeholder='Digite seu Nome'
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={form.name}
+                    onChange={handleInputChange}
+                    icon={AccountCircleIcon}
+                />
+
+                <FormInput
+                    placeholder="Cadastre seu Email"
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleInputChange}
+                    icon={EmailIcon}
+                />
 
                 <SaveButton onClick={handleSubmit}>Cadastrar</SaveButton>
             </FormContainer>
-
             {
                 openSnackBar && <SnackBar title={snackBarMessage} />
             }
+
         </>
     )
 }

@@ -17,7 +17,7 @@ export const MenuUser = ({ open, photo, email }) => {
     const logout = () => {
                
                 setUser({
-                    logged: false,
+                    logged: false, 
                     email: '',
                     photo: ''
                 });

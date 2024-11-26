@@ -10,7 +10,7 @@ export const HeaderMenu = styled.header`
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 4;
   background-color: ${({ theme }) => theme.headerBackground};
 `;
 export const Navigation = styled.nav`
@@ -23,6 +23,7 @@ export const Navigation = styled.nav`
 `;
 
 export const NavigationItem = styled.div``;
+
 export const StyledMenuButton = styled.div`
   & :hover {
     background-color: ${({ theme }) => theme.hoverColor};

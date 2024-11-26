@@ -79,10 +79,10 @@ export const Login = () => {
 
     const handleSubmit = (e) => {
 
-        e.preventDefault(); 
+        e.preventDefault();
 
         if (!e.target.checkValidity()) {
-            e.target.reportValidity(); // Mostra as mensagens de erro nativas do HTML5
+            e.target.reportValidity();
             return;
         }
         if (file) {
@@ -138,14 +138,14 @@ export const Login = () => {
                         id="password"
                         name="password"
                         onChange={handleInputChange}
-                        error={errors.password}  
+                        error={errors.password}
                         required
                     />
                 </InputContainer>
 
                 <InputContainer>
                     <UploadIconContainer onClick={triggerFileUpload}>
-                        <UploadIcon /> 
+                        <UploadIcon />
                         <InputLabel>Upload Imagem</InputLabel>
                     </UploadIconContainer>
                     <HiddenFileInput
@@ -156,7 +156,7 @@ export const Login = () => {
                         required
                     />
                 </InputContainer>
-                
+
                 <SaveButton type='submit' >Sign In</SaveButton>
             </FormContainer>
 

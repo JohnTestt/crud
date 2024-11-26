@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 
 export const FormContainer = styled.div`
@@ -6,54 +6,40 @@ export const FormContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background-color: #f9f9f9;
+  background-color: ${({ theme }) => theme.backgroundForm};
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 50%;
   margin: 0 auto;
   margin-top: 5rem;
- 
-`;
+  padding: 20px 0px;
+  overflow: hidden;
 
-export const InputContainer = styled.div`
-  min-width: 40%;
-  margin-bottom: 20px;
-`;
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-top: 2rem;
+    box-shadow: none;
+  }
 
-export const InputField = styled.input`
-  width: calc(100% - 20px);
-  padding: 15px;
-  margin-bottom: 20px; 
-  border: solid  #1976d2 1px;
-  border-radius: 4px;
-  font-size: 16px;
-
-
-  &:focus {
-    outline: none;
-    border: 2px solid  #1565c0;
+  @media (orientation: landscape) and (max-width: 900px) {
+    box-shadow: none;
+    max-width: 60%;
   }
 `;
 
-
 export const SaveButton = styled.button`
-  padding: 15px 30px;
+  padding: 18px 120px;
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
   background-color: #1976d2;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
+
+  margin: 2rem 0;
+
   &:hover {
     background-color: #1565c0;
   }
-`;
-
-export const InputLabel = styled.label`
-  display: block;
-  margin-bottom: 5px;
-  color: #333;
-  font-size: 16px;
 `;
 

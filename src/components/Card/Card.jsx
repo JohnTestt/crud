@@ -10,7 +10,7 @@ export const  Card = ({id, first_name, last_name, email, avatar, onRemoveCustume
     const [openModal, setOpenModal] = useState(false);
   
 
-    const handleOpenModal = () => {
+    const handleOpenModal = () => { 
         setOpenModal(!openModal)
     };
 

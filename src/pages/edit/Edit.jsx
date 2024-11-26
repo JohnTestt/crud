@@ -3,14 +3,16 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { SnackBar } from "../../components/SnackBar/SnackBar";
 import { useNavigate } from "react-router-dom";
+import { FormInput } from "../../components/FormInput/FormInput";
 
 import {
     FormContainer,
-    InputField,
     SaveButton,
-    InputContainer,
-    InputLabel,
+
 } from './style/style';
+
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import EmailIcon from "@mui/icons-material/Email";
 
 export const Edit = () => {
 
@@ -23,7 +25,7 @@ export const Edit = () => {
     const [snackBarMessage, setSnackBarMessage] = useState('');
 
     useEffect(() => {
-      
+
         axios.get(`https://reqres.in/api/users/${id}`)
             .then(response => {
                 const { data } = response.data;
@@ -89,28 +91,25 @@ export const Edit = () => {
         <>
             <FormContainer as='form' onSubmit={handleAdd}>
 
-                <InputContainer>
-                    <InputLabel>Editar Nome</InputLabel>
-                    <InputField
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={form.name}
-                        onChange={handleInputChange}
+                <FormInput
+                    placeholder='Digite seu Nome'
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={form.name}
+                    onChange={handleInputChange}
+                    icon={AccountCircleIcon}
+                />
 
-                    />
-                </InputContainer>
-
-                <InputContainer>
-                    <InputLabel>Editar Email</InputLabel>
-                    <InputField
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleInputChange}
-                    />
-                </InputContainer>
+                <FormInput
+                    placeholder="Cadastre seu Email"
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleInputChange}
+                    icon={EmailIcon}
+                />
 
                 <SaveButton type='submit'>Salvar</SaveButton>
             </FormContainer>
