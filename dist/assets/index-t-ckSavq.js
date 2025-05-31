@@ -105,7 +105,7 @@ align-items: center;
 `,OS=j.img`
 
 
-`,bS=()=>{const[e,t]=_.useState(null);return _.useEffect(()=>{te.get("http://api.weatherapi.com/v1/current.json",{params:{key:"54eef18cbe4f462e930121721242311",q:"auto:ip",lang:"pt"}}).then(n=>{const r=n.data;console.log(r),t(r)}).catch(n=>{console.error("Erro na requisição:",n)})},[]),x.jsx(_S,{children:e&&e.current?x.jsxs(rp,{children:[x.jsx(OS,{src:e.current.condition.icon,alt:e.current.condition.text}),x.jsxs($S,{children:[e.location.region," ",e.current.temp_c,"°C"]})]}):x.jsx(rp,{children:x.jsx("p",{children:"Carregando dados climáticos..."})})})},jS=j.div`
+`,bS=()=>{const[e,t]=_.useState(null);return _.useEffect(()=>{te.get("https://api.weatherapi.com/v1/current.json",{params:{key:"54eef18cbe4f462e930121721242311",q:"auto:ip",lang:"pt"}}).then(n=>{const r=n.data;console.log(r),t(r)}).catch(n=>{console.error("Erro na requisição:",n)})},[]),x.jsx(_S,{children:e&&e.current?x.jsxs(rp,{children:[x.jsx(OS,{src:e.current.condition.icon,alt:e.current.condition.text}),x.jsxs($S,{children:[e.location.region," ",e.current.temp_c,"°C"]})]}):x.jsx(rp,{children:x.jsx("p",{children:"Carregando dados climáticos..."})})})},jS=j.div`
   padding: 20px;
   line-height: 1.6;
   margin: 0 auto;

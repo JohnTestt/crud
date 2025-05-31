@@ -11,7 +11,7 @@ import { Edit } from './pages/edit/Edit';
 
 
 function App() {
-  return (
+  return ( 
     <Router>
       <Routes>
         <Route path='/' element={<Header><Template title='' Component={Home} /></Header>} />

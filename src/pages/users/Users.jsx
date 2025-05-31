@@ -24,8 +24,13 @@ export const Users = () => {
 
                 do {
 
-                    const response = await axios.get('https://reqres.in/api/users', { params: { page } });
-                    const { data, total_pages } = response.data;
+                    const response = await axios.get('https://reqres.in/api/users', { 
+                        params: { page },
+                        headers: {
+                              'x-api-key': 'reqres-free-v1' 
+                            }
+                        });
+                    const { data, total_pages } = response.data; 
                     console.log(response.data)
                     allUsers = [...allUsers, ...data];
                     allPages = total_pages;
